@@ -1,0 +1,32 @@
+services:
+
+  api-gateway:
+    build: api-gateway/
+    ports: 
+    - "8080:8080"
+    restart: always
+    depends_on:
+      - core-service
+
+  core-service:
+    build: core-service/
+    ports: 
+    - "8081:8081"
+    restart: always
+
+  postgres:
+    image: postgres:15
+    restart : always
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    ports:
+    - "5432:5432"
+    environment:
+      - POSTGRES_USER=coreuser
+      - POSTGRES_PASSWORD=corepass
+      - POSTGRES_DB=coredb
+    depends_on: 
+       - api-gateway
+
+networks:
+  default:
