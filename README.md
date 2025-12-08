@@ -23,6 +23,6 @@ curl -X PUT http://localhost:8080/api/tasks/1 \
   -d "{\"title\":\"Updated task\",\"completed\":true}"
 
 удаление задачки:<br />
-curl -X DELETE http://localhost:8080/api/task s/
+curl -X DELETE http://localhost:8080/api/tasks/1
 
 короче все что подходит под концепцию crud
