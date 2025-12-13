@@ -30,23 +30,23 @@
 КАК ЗАПУСКАТЬ ТЕСТЫ, А ОЧЕНЬ ПРОСТО ДЛЯ ЭТОГО НАМ ПОНАДОВИТСЯ COCOJAMPA, А ТОЧНЕЕ JACOCO
 
 Сначала переходим в дерикторию core-service команда:
-cd .\core-service\
+`cd .\core-service\`
 
 Что бы запустить обычный тест, он не даст нам покрывания подойдет команда: (не надо писать)
-.\mvnw test
+`.\mvnw test`
 
 Что бы запустить трушный тест нам нужна команда: (надо писать)
-.\mvnw clean test 
+`.\mvnw clean test `
 
 Далее переходим в дерикторию api-gateway команда:
-cd .\api-gateway\ 
+`cd .\api-gateway\ `
 
 Что бы запустить трушный тест нам нужна команда:
-.\mvnw clean test
+`.\mvnw clean test`
 
 НО ГДЕ ЖЕ ПОСМОТРЕТЬ РЕЗУЛЬТАТЫ ПОКРЫВАНИЯ??????
 
 Тупо заходим в папку проекта в ПРОВОДНИКЕ (РАБОТАЕТ БЕЗ СМС И РЕГИСТРАЦИИ)
-C:\Users\..\hhhummxk\api-gateway\target\site\jacoco\ и открываем файл index.html
-C:\Users\..\hhhummxk\core-service\target\site\jacoco\ аналогично!
+`C:\Users\..\hhhummxk\api-gateway\target\site\jacoco\ и открываем файл index.html`
+`C:\Users\..\hhhummxk\core-service\target\site\jacoco\ аналогично!`
 
