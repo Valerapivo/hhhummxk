@@ -50,3 +50,12 @@
 `C:\Users\..\hhhummxk\api-gateway\target\site\jacoco\ и открываем файл index.html`
 `C:\Users\..\hhhummxk\core-service\target\site\jacoco\ аналогично!`
 
+cd C:\Users\evgra\HHH\hhhummxk\api-gateway
+./mvnw package -DskipTests
+
+cd ..\core-service
+./mvnw package -DskipTests
+
+cd ..
+docker compose down -v
+docker compose up --build

@@ -1,10 +1,8 @@
-FROM gradle:jdk17-ubi9
-WORKDIR /project/
+FROM eclipse-temurin:17-jdk
+WORKDIR /project
 
 COPY ./ ./
-EXPOSE 8080
-
 RUN chmod +x ./mvnw
 RUN ./mvnw clean package -DskipTests
 
-ENTRYPOINT java -jar target/api-gateway-0.0.1-SNAPSHOT.jar
+CMD ["./mvnw", "spring-boot:run"]
